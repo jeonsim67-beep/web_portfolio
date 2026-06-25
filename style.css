@@ -12,7 +12,14 @@ body {
     cursor: none;
 }
 
-/* === Cursor Design Start === */
+a,
+button,
+li,
+img {
+    cursor: none;
+}
+
+/* === 커서 이전 적용 CSS
 .cursor {
     width: 40px;
     height: 40px;
@@ -30,6 +37,42 @@ body {
 .cursor.active {
     transform: translate(-50%, -50%) scale(1.5);
 }
+커서 이전 CSS === */
+
+
+/*==신규 커서 시작==*/
+/* Cursor */
+.cursor {
+    position: fixed;
+    left: 0;
+    top: 0;
+
+    width: 40px;
+    height: 40px;
+
+    border-radius: 50%;
+
+    background: #fff;
+
+    pointer-events: none;
+
+    z-index: 99999;
+
+    transform: translate(-50%, -50%) scale(1);
+
+    mix-blend-mode: difference;
+
+    transition:
+        width .35s cubic-bezier(.22, 1, .36, 1),
+        height .35s cubic-bezier(.22, 1, .36, 1),
+        transform .35s;
+}
+
+.cursor.active {
+    transform: translate(-50%, -50%) scale(1.8);
+}
+
+/*==신규 커서 끝==*/
 
 
 /*==== Header Start ====*/
@@ -99,8 +142,9 @@ header {
 }
 
 .contact_btn:hover {
-    background: white;
+    background: #BBFF00;
     color: #000;
+    border-color: #BBFF00;
 }
 
 /**/
@@ -405,7 +449,7 @@ header {
 }
 
 .contact_button:hover {
-    background: white;
+    background: #BBFF00;
     color: black;
 }
 
