@@ -1,0 +1,534 @@
+/*초기세팅*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #000;
+    color: #fff;
+    font-family: "pretendard", sans-serif;
+    cursor: none;
+}
+
+/* === Cursor Design Start === */
+.cursor {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: white;
+    position: fixed;
+    pointer-events: none;
+    mix-blend-mode: difference;
+    z-index: 9999;
+    transform: translate(-50%, -50%) scale(1);
+    transition: transform .3s ease;
+}
+
+
+.cursor.active {
+    transform: translate(-50%, -50%) scale(1.5);
+}
+
+
+/*==== Header Start ====*/
+header {
+    width: 100%;
+    height: 100px;
+    position: fixed;
+}
+
+.header_inner {
+    width: 100%;
+    max-width: 1440px;
+    padding: 40px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/*로고*/
+.logo img {
+    width: 72px;
+    height: 72px;
+    display: block;
+
+}
+
+.right_menu {
+    display: flex;
+    align-items: center;
+    gap: 48px;
+
+}
+
+.menu {
+    display: flex;
+    gap: 48px;
+    list-style: none;
+}
+
+.menu a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+/*오른메뉴 구분*/
+.right_menu a {
+    font-family: 'Anton', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/*문의하기 버튼*/
+.contact_btn {
+    padding: 18px 40px;
+    border: 2px solid #fff;
+    border-radius: 999px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 700;
+    transition: all 0.3s ease;
+}
+
+.contact_btn:hover {
+    background: white;
+    color: #000;
+}
+
+/**/
+
+/*hero start*/
+.hero {
+    display: flex;
+    justify-content: center;
+    padding-top: 120px;
+}
+
+.hero_video {
+    width: 100%;
+    max-width: 675px;
+    margin-top: 120px;
+    height: auto;
+    display: block;
+}
+
+/*==hero end==*/
+
+/*==About start==*/
+
+.about {
+    padding: 300px 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+/*소개문구*/
+
+.about_text {
+    text-align: center;
+}
+
+.about_text p {
+    font-family: "pretendard", sans-serif;
+    font-size: 24px;
+    font-weight: 300;
+    line-height: 1.5;
+    color: #ffffff;
+}
+
+.about_text strong {
+    font-weight: 600;
+}
+
+/*수치 영역*/
+.about_stats {
+    width: 100%;
+    max-width: 1440px;
+    margin-top: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*숫자 카드*/
+.stat_item {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+/*since & project*/
+
+.stat_label {
+    font-family: 'Anton', sans-serif;
+    font-size: 24px;
+    line-height: 1;
+    color: #808080;
+    margin-bottom: 20px;
+
+}
+
+/*2001 & 1000+*/
+
+.stat_item h2 {
+    font-size: 76px;
+    font-weight: 700;
+    line-height: 1;
+    color: #fff;
+
+}
+
+/*가운데 세로선*/
+.stat_divider {
+    width: 1px;
+    height: 128px;
+    background: #808080;
+}
+
+/*==About end==*/
+
+/*==== project start ===*/
+.project {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 200px 40px;
+}
+
+.project_list {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+/*타이틀 영역*/
+
+.section_title {
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+
+.section_title h2 {
+    font-family: 'Anton', sans-serif;
+    font-size: 88px;
+    line-height: 1;
+    color: #fff;
+}
+
+
+.section_title p {
+    margin-top: 24px;
+    font-family: "pretendard", sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    color: #fff;
+}
+
+
+/* card */
+.project_card {
+    display: flex;
+    overflow: hidden;
+    border-radius: 20px;
+    color: #161616;
+}
+
+/* 좌측 콘텐츠*/
+.project_content {
+    width: 50%;
+    padding: 80px 64px;
+    display: flex;
+    flex-direction: column;
+}
+
+.project_content h3 {
+    font-family: "pretendard", sans-serif;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.3;
+    color: #fff margin-bottom: 28px;
+}
+
+.project_content p {
+    font-family: "pretendard", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.8;
+    color: #fff;
+    max-width: 520px;
+    margin-bottom: 80px;
+
+}
+
+/*-----여기까지 오전진행-----*/
+.project_content {
+    flex: 1;
+}
+
+.project_content h3 {
+    font-family: 'Anton', sans-serif;
+    font-size: 36px;
+    font-weight: 700;
+    color: #fff;
+}
+
+.project_content p {
+    font-family: "pretendard", sans-serif;
+    font-size: 24px;
+    font-weight: 300;
+    color: #fff;
+    margin-top: 20px;
+}
+
+/*technique*/
+
+.technique {
+    margin-top: auto;
+
+}
+
+.technique span {
+    display: block;
+    font-family: 'pertendard', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.technique_list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    list-style: none;
+}
+
+/*list li*/
+.technique_list li {
+    padding: 0 18px;
+    border-radius: 999px;
+    background: #333;
+    font-family: 'pretendard', sans-serif;
+    font-size: 14px;
+    line-height: 1.6;
+    font-weight: 700;
+    color: #fff;
+
+}
+
+.project_image {
+    width: 50%;
+}
+
+.project_image img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+
+}
+
+/*=== Contact Start ===*/
+
+.contact {
+    max-width: 1440px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 200px 40px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+/*Title*/
+
+.contact_title {
+    text-align: center;
+    ;
+}
+
+.contact_title h2 {
+    font-family: 'Anton', sans-serif;
+    font-size: 76px;
+    line-height: 1.1;
+    font-weight: 400;
+    color: #fff;
+}
+
+/*Description*/
+.contact_description {
+    margin-top: 48px;
+    text-align: center;
+}
+
+.contact_description p {
+    font-family: 'Pretendard', sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 1.4;
+    color: #fff;
+    margin-top: 8px;
+}
+
+/*Button*/
+
+.contact_button {
+    margin-top: 80px;
+    width: 420px;
+    height: 96px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #fff;
+    border-radius: 999px;
+    text-decoration: none;
+    font-family: 'Anton', sans-serif;
+    font-size: 36px;
+    font-weight: 400;
+    color: #fff;
+    transition: all 0.3s ease;
+
+}
+
+.contact_button:hover {
+    background: white;
+    color: black;
+}
+
+/* 공통 */
+
+.character_left,
+.character_right {
+    position: absolute;
+    width: 180px;
+}
+
+/* 좌측 */
+
+.character_left {
+    left: 40px;
+    bottom: 120px;
+
+}
+
+/* 우측 */
+
+.character_right {
+    right: 0;
+    top: 140px;
+    transform: translate(0) rotate(17deg);
+}
+
+
+/*=== Contact End ===*/
+
+/*=== Footer Start ===*/
+.footer {
+    background-color: #BBFF00;
+    padding: 40px;
+    overflow: hidden;
+}
+
+.footer_inner {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+
+/*하단 정보 영역*/
+
+.footer_info h3 {
+    font-family: 'pretendard', sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: #000;
+    margin-bottom: 24px;
+
+}
+
+.footer_info p {
+    font-family: 'pretendard', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 2;
+    color: #000;
+}
+
+
+.footer_info strong {
+    font-weight: 700;
+    margin-right: 8px;
+}
+
+/* 구분선 */
+
+.footer_divider {
+    width: 100%;
+    height: 1px;
+    background-color: #000;
+    margin: 48px 0;
+}
+
+
+/* 하단영역 */
+
+.footer_bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 32px;
+}
+
+/* 카피라이트*/
+
+.copyright {
+    font-family: "pretendard", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1;
+    color: #000;
+}
+
+/*태그영역*/
+.footer_tag {
+    display: flex;
+    gap: 12px;
+
+}
+
+.footer_tag span {
+    padding: 4px 20px;
+    border-radius: 999px;
+    background: #000;
+    font-family: 'pretendard', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+
+
+}
+
+/*대형 로고*/
+
+.footer_logo img {
+    width: 100%;
+    display: block;
+
+}
+
+
+/*=== Footer End ===*/
